@@ -111,7 +111,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image1 = Image.open("./background.png")
     image3 = changeImageSize(1280, 720, image1)
     image5 = image3.convert("RGBA")
-    Image.alpha_composite(image5, image6).save("temp.png")
+    Image.alpha_composite(image5).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
