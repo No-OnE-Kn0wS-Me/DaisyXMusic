@@ -109,9 +109,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image1 = Image.open("./background.png")
+    image2 = Image.open("./etc/foreground.png")
     image3 = changeImageSize(1280, 720, image1)
+    image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
-    Image.alpha_composite(image5).save("temp.png")
+    image6 = image4.convert("RGBA")
+    Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
@@ -221,7 +224,7 @@ async def settings(client, message):
         else:
             await message.reply(stats, reply_markup=r_ply("play"))
     else:
-        await message.reply("No VC instances running in this chat ")
+        await message.reply("No VC instances running in this chat")
 
 
 @Client.on_callback_query(filters.regex(pattern=r"^(playlist)$"))
