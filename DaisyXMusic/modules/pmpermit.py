@@ -46,7 +46,7 @@ async def bye(client: Client, message: Message):
         text = message.text.split(" ", 1)
         queryy = text[1]
         if queryy == "on":
-            PMSET = True Pm
+            PMSET = True 
             await message.reply_text("Pmpermit turned on")
             return
         if queryy == "off":
