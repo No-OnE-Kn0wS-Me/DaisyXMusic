@@ -15,7 +15,7 @@ class MusicPlayer(object):
     def __init__(self):
         self.group_call = GroupCall(USER, path_to_log_file='')
         self.chat_id = None
-        self.msg = {}
+        
 
 
     async def start_radio(self):
