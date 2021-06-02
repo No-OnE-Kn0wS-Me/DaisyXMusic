@@ -1,9 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from vc import mp, RADIO
-from config import Config
-STREAM_URL=Config.STREAM_URL
-ADMINS=Config.ADMINS
+from DaisyXMusic.config import ADMINS, STREAM_URL
 
 @Client.on_message(filters.command("radio") & filters.user(ADMINS))
 async def radio(client, message: Message):
