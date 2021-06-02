@@ -47,3 +47,5 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
 STREAM_URL=os.environ.get("STREAM_URL", "https://eu10.fastcast4u.com/clubfmuae")
 LOG_GROUP=os.environ.get("LOG_GROUP", None)
 ADMINS = os.environ.get("ADMINS", '')
+CHAT = int(os.environ.get("CHAT", ""))
+  
