@@ -44,3 +44,6 @@ LOG_GRP = getenv("LOG_GRP", None)
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ !").split())
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
+STREAM_URL=os.environ.get("STREAM_URL", "https://eu10.fastcast4u.com/clubfmuae")
+LOG_GROUP=os.environ.get("LOG_GROUP", None)
+ADMIN = os.environ.get("ADMINS", '')
