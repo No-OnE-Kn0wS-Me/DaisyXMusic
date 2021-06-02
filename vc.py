@@ -15,8 +15,6 @@ class MusicPlayer(object):
     def __init__(self):
         self.group_call = GroupCall(USER, path_to_log_file='')
         self.chat_id = None
-        self.start_time = None
-        self.playlist = []
         self.msg = {}
 
 
